@@ -1,0 +1,307 @@
+.dashboardLayout {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+.topNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg-card);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.navBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.navBrand small {
+  font-weight: 500;
+  color: var(--color-primary);
+  background-color: #eff6ff;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.userProfileSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profileBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatarLetter {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1d4ed8 100%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.profileMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileMeta strong {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.profileMeta span {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: var(--transition-smooth);
+}
+
+.logoutBtn:hover {
+  background-color: #fee2e2;
+  color: var(--color-danger);
+  border-color: #fca5a5;
+}
+
+.contentWorkspace {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.welcomeHeroBlock {
+  margin-bottom: 2rem;
+}
+
+.welcomeHeroBlock h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.welcomeHeroBlock p {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+}
+
+.progressCardAlert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #f0fdf4, #dcfce7);
+  border: 1px solid #bbf7d0;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.alertMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.alertMeta h3 {
+  font-size: 1.1rem;
+  color: #14532d;
+  margin-bottom: 0.25rem;
+}
+
+.alertMeta p {
+  font-size: 0.9rem;
+  color: #166534;
+}
+
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--color-success);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.downloadBtn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.sectionHeading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.examsGridGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.emptyExamsState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.examItemCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.examItemCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardHeaderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.subjectTag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #f1f5f9;
+  color: var(--color-text-secondary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.durationTag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.examItemCard h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.examItemCard p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.cardActionAreaFooter {
+  margin-top: auto;
+}
+
+.startExamActionBtn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.startExamActionBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.attemptStatusWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scorePill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.scorePill.pass {
+  background-color: #e6f4ea;
+  color: var(--color-success);
+}
+
+.scorePill.fail {
+  background-color: #fce8e6;
+  color: var(--color-danger);
+}
+
+.retakeActionBtn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid var(--color-warning);
+  color: var(--color-warning);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.retakeActionBtn:hover {
+  background-color: #fff7ed;
+}

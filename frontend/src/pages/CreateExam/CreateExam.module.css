@@ -1,0 +1,309 @@
+/* src/pages/CreateExam/CreateExam.module.css */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-2xl);
+  animation: fadeIn var(--transition-normal) ease-out;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-lg);
+  transition: color var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: var(--color-primary);
+}
+
+.formLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.saveBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--color-success);
+  color: var(--color-text-primary);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  padding: 0.75rem var(--spacing-lg);
+  font-size: 0.9375rem;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.saveBtn:hover {
+  background-color: var(--color-success-hover);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+}
+
+/* Metadata Form Panel */
+.metaSection {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+
+.fieldsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .fieldsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .fieldsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.fieldGroupFull {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  width: 100%;
+}
+
+.fieldLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+}
+
+.input, .select, .textarea {
+  background-color: var(--color-bg-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.625rem var(--spacing-md);
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+}
+
+.select {
+  cursor: pointer;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+/* Questions Form Section */
+.questionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.questionsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: rgba(99, 102, 241, 0.1);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.5rem var(--spacing-md);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.addBtn:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-glow);
+}
+
+.questionsStack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.questionCard {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.questionNumber {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.removeBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.removeBtn:hover {
+  color: var(--color-danger);
+}
+
+.questionFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.optionInputWrapper {
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.optionLetter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg-offset);
+  border: 1px solid var(--color-border);
+  border-right: none;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.optionInputWrapper input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 100%;
+}
+
+.keySelectionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-top: var(--spacing-sm);
+}
+
+.keyLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.keySelect {
+  background-color: var(--color-bg-offset);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem var(--spacing-md);
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+}

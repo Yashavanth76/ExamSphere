@@ -1,0 +1,462 @@
+.adminMainViewport {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg-base);
+  overflow: hidden;
+}
+
+.topNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 0.85rem 2rem;
+  border-bottom: 2px solid #1e293b;
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+
+.brandTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brandTitle small {
+  font-weight: 600;
+  color: white;
+  background-color: var(--color-danger);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.adminMetaSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.adminMeta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.adminMeta strong {
+  font-size: 0.9rem;
+  color: #f8fafc;
+}
+
+.adminMeta span {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  background-color: transparent;
+  border: 1px solid #334155;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.8rem;
+  transition: var(--transition-smooth);
+}
+
+.logoutBtn:hover {
+  background-color: rgba(220, 38, 38, 0.15);
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.workspaceSplitContainer {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.primaryContentBlock {
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.metricsCardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.metricItemCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.metricItemCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: #94a3b8;
+}
+
+.activeCardMetric {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px var(--color-primary) !important;
+  background-color: #eff6ff;
+}
+
+.metricItemCard h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.metricItemCard span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.contentDisplayCard {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  min-height: 400px;
+}
+
+.viewHeadlineTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.noticeTextParagraph {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.adminDataGridTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.adminDataGridTable th {
+  background-color: #f8fafc;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.adminDataGridTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+
+.streamBadgeTag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.pendingStatusBadgeIndicator {
+  font-size: 0.7rem;
+  font-weight: 700;
+  background-color: #fef3c7;
+  color: #b45309;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.teachersTwinLayoutSplit {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.addTeacherFormPanelCard {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  height: fit-content;
+}
+
+.addTeacherFormPanelCard h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+}
+
+.teacherFormInputGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.teacherFormInputGrid input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  outline: none;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.teacherFormInputGrid input:focus {
+  border-color: var(--color-primary);
+}
+
+.formTeacherRegisterActionSubmitBtn {
+  padding: 0.65rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  margin-top: 0.25rem;
+}
+
+.formTeacherRegisterActionSubmitBtn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.actionButtonPillWrapperStack {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tableInlineApproveActionActionBtn,
+.tableInlineDenyActionActionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.tableInlineApproveActionActionBtn {
+  background-color: #e6f4ea;
+  color: var(--color-success);
+}
+
+.tableInlineApproveActionActionBtn:hover { background-color: #d1e7dd; }
+
+.tableInlineDenyActionActionBtn {
+  background-color: #fce8e6;
+  color: var(--color-danger);
+}
+
+.tableInlineDenyActionActionBtn:hover { background-color: #f8d7da; }
+
+.emptyRequestsPlaceholderText {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.activityFeedAuditLogsSidebarPanel {
+  background-color: var(--color-bg-card);
+  border-left: 1px solid var(--color-border);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sidebarSectionHeadingTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.75rem;
+}
+
+.systemScrollingLogsVerticalContainerList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.individualLogItemRowNode {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.logMetaMetaHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+}
+
+.logActorUsernameTextLabel {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.logTimestampStringTextLabel {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.logMessageContentStringDescriptionBody {
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+/* Simulated Email Notice Modal Popups styling */
+.emailNotificationModalPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.6);
+  -webkit-backdrop-filter: blur(4px); /* For Safari support */
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.emailContentCardFrameBox {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 540px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.emailModalHeaderTopSummaryArea {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emailModalHeaderTopSummaryArea h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.simulatedEmailRawBodyContainerBlock {
+  background-color: #f8fafc;
+  border: 1px solid var(--color-border);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.simulatedEmailRawBodyContainerBlock hr {
+  margin: 0.75rem 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+
+.simulatedEmailRawBodyContainerBlock ul {
+  margin: 0.5rem 0 0.5rem 1.25rem;
+}
+
+.closeEmailToastBtn {
+  align-self: flex-end;
+  padding: 0.6rem 1.25rem;
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.inlineDeleteRowBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.inlineDeleteRowBtn:hover {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  color: var(--color-danger);
+  transform: scale(1.05);
+}
+
+.inlineDeleteRowBtn:active {
+  transform: scale(0.95);
+}

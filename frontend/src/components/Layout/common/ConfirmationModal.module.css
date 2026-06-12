@@ -1,0 +1,133 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.6); 
+  
+  /* 🟢 FIX: Dual-line safety declaration */
+  -webkit-backdrop-filter: blur(4px); 
+  backdrop-filter: blur(4px);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+  border: 1px solid #e2e8f0;
+  animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closeCornerBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.closeCornerBtn:hover {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.alertIconCircle {
+  background: #fef2f2;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.modalBody p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.cancelBtn {
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.cancelBtn:hover {
+  background: #e2e8f0;
+}
+
+.confirmBtn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  
+  /* 🟢 FIX: Explicit properties declaration */
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+}
+
+.confirmBtn:hover {
+  background-color: #b91c1c; /* Use background-color to match the transition target */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
